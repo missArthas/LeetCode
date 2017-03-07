@@ -8,6 +8,7 @@ __ConfigTemp/
 .settings/
 *~
 *.orig
+*.class
 *.new
 .idea/
 *.iml
