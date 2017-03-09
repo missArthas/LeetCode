@@ -7,6 +7,7 @@ public class Q345ReverseVowelsOfString {
         System.out.println(object.reverseVowels("hello"));
     }
     public String reverseVowels(String s) {
+        char[] vowels={'a','e','i','o','u'};
         return "";
     }
 }
