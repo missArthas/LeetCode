@@ -1,11 +1,9 @@
-import java.util.regex.Pattern;
-
 /**
  * Created by shhuang on 2017/3/10.
  */
-public class q516LongestPalindromicSubsequence {
+public class Q516LongestPalindromicSubsequence {
     public static void main(String[] args){
-        q516LongestPalindromicSubsequence object = new q516LongestPalindromicSubsequence();
+        Q516LongestPalindromicSubsequence object = new Q516LongestPalindromicSubsequence();
         String str="9aeabcba92";
         System.out.println(object.longestPalindromeSubseq(str));
     }
