@@ -10,15 +10,12 @@ public class Q219ContainsDuplicate2 {
         System.out.println(object.containsNearbyDuplicate(nums, 4));
     }
 
-    //    public boolean containsNearbyDuplicate(int[] nums, int k) {
-//        for(int i=0;i<nums.length;i++){
-//            for(int j=1;j<=k&&i+j<nums.length;j++){
-//                if(nums[i]==nums[i+j]) return true;
-//            }
-//        }
-//        return false;
-//    }
-    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        public boolean containsNearbyDuplicate(int[] nums, int k) {
+        for(int i=0;i<nums.length;i++){
+            for(int j=1;j<=k&&i+j<nums.length;j++){
+                if(nums[i]==nums[i+j]) return true;
+            }
+        }
         return false;
     }
 }
