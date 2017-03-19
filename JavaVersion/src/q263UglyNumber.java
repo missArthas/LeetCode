@@ -1,9 +1,9 @@
 /**
  * Created by shhuang on 2017/3/13.
  */
-public class q263UglyNumber {
+public class Q263UglyNumber {
     public static void main(String[] args){
-        q263UglyNumber object =new q263UglyNumber();
+        Q263UglyNumber object =new Q263UglyNumber();
         System.out.println(object.isUgly(6));
     }
 
