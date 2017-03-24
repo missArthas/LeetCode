@@ -19,3 +19,9 @@ class Solution(object):
 
 object=Solution()
 print object.titleToNumber("YZ")
+
+a=[1,2,3,4,5,6]
+print a[0]
+print a
+print a[2:4]
+print a[1:6:2]
