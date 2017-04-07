@@ -6,28 +6,24 @@
 #         self.right = None
 from TreeNode import TreeNode
 class Solution(object):
-    result=0
-    def pathSum(self, root, sum):
+    def hasPathSum(self, root, sum):
         """
         :type root: TreeNode
         :type sum: int
-        :rtype: int
+        :rtype: bool
         """
-        if(root==None):return
-        self.dfs(root,sum)
-        self.pathSum(root.left,sum)
-        self.pathSum(root.right,sum)
-        return self.result
+        if(root==None):return False
 
-    def dfs(self,root,sum):
-        if(root==None):return
-        if(sum==root.val):
-            self.result+=1
+        if(root.left==None and root.right==None):
+            if(sum-root.val==0):
+                return True
+            else:
+                return False
 
-        self.dfs(root.left,sum-root.val)
-        self.dfs(root.right,sum-root.val)
-
-
+        leftResult=self.hasPathSum(root.left,sum-root.val)
+        rightResult=self.hasPathSum(root.right,sum-root.val)
+        if(leftResult or rightResult):return True
+        else:return False
 
 
 root=TreeNode(10)
@@ -49,7 +45,5 @@ right2.right=right3
 rightR=TreeNode(11)
 right1.right=rightR
 
-
-
 object=Solution()
-print object.pathSum(root,8)
+print object.hasPathSum(root,19)
