@@ -6,16 +6,12 @@ class Solution(object):
         """
         if(x==0):
             return 0
-        sum=1
-        template=1
-        times=1
-        while(sum<x):
-            template+=2
-            sum+=template
-            times+=1
-        if(sum==x):
-            return times
-        else:
-            return times-1
+        first=1597463174
+        last=(first+x/first)/2
+        while(last*last>x):
+            last = (first + x / first) / 2
+            first=last
+        return last
+
 object=Solution()
-print object.mySqrt(1960499722)
+print object.mySqrt(4)
